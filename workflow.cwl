@@ -2,13 +2,13 @@ cwlVersion: v1.2
 class: Workflow
 
 inputs:
-  DT5301: File
-  DT5302: File
-  DT5303: File
+  DT5301: Directory
+  DT5302: Directory
+  DT5303: Directory
 
 outputs:
   DT5305:
-    type: File
+    type: Directory
     outputSource: SS5303/DT5305
 
 steps:
@@ -18,20 +18,20 @@ steps:
       baseCommand: ["SS5301"]
       inputs:
         DT5301:
-          type: File
+          type: Directory
           inputBinding:
             position: 1
         DT5302:
-          type: File
+          type: Directory
           inputBinding:
             position: 2
         DT5303:
-          type: File
+          type: Directory
           inputBinding:
             position: 3
       outputs:
         DT5304:
-          type: File
+          type: Directory
           outputBinding:
             glob: DT5304
     in:
@@ -46,32 +46,32 @@ steps:
       baseCommand: ["SS5302"]
       inputs:
         DT5301:
-          type: File
+          type: Directory
           inputBinding:
             position: 1
         DT5302:
-          type: File
+          type: Directory
           inputBinding:
             position: 2
         DT5303:
-          type: File
+          type: Directory
           inputBinding:
             position: 3
         DT5304:
-          type: File
+          type: Directory
           inputBinding:
             position: 4
       outputs:
         DT5301:
-          type: File
+          type: Directory
           outputBinding:
             glob: DT5301
         DT5302:
-          type: File
+          type: Directory
           outputBinding:
             glob: DT5302
         DT5303:
-          type: File
+          type: Directory
           outputBinding:
             glob: DT5303
     in:
@@ -87,24 +87,24 @@ steps:
       baseCommand: ["SS5303"]
       inputs:
         DT5301:
-          type: File
+          type: Directory
           inputBinding:
             position: 1
         DT5302:
-          type: File
+          type: Directory
           inputBinding:
             position: 2
         DT5303:
-          type: File
+          type: Directory
           inputBinding:
             position: 3
         DT5304:
-          type: File
+          type: Directory
           inputBinding:
             position: 4
       outputs:
         DT5305:
-          type: File
+          type: Directory
           outputBinding:
             glob: DT5305
     in:
