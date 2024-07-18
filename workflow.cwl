@@ -1,3 +1,5 @@
+#!/usr/bin/env cwl-runner
+
 cwlVersion: v1.2
 class: Workflow
 
@@ -13,9 +15,13 @@ outputs:
 
 steps:
   SS5301:
+    in:
+      DT5301: DT5301
+      DT5302: DT5302
+      DT5303: DT5303
     run:
       class: CommandLineTool
-      baseCommand: ["SS5301"]
+
       inputs:
         DT5301:
           type: Directory
@@ -29,21 +35,23 @@ steps:
           type: Directory
           inputBinding:
             position: 3
+
       outputs:
         DT5304:
           type: Directory
           outputBinding:
             glob: DT5304
+    out:
+    - DT5304
+  SS5302:
     in:
       DT5301: DT5301
       DT5302: DT5302
       DT5303: DT5303
-    out: [DT5304]
-
-  SS5302:
+      DT5304: SS5301/DT5304
     run:
       class: CommandLineTool
-      baseCommand: ["SS5302"]
+
       inputs:
         DT5301:
           type: Directory
@@ -61,6 +69,7 @@ steps:
           type: Directory
           inputBinding:
             position: 4
+
       outputs:
         DT5301:
           type: Directory
@@ -74,17 +83,19 @@ steps:
           type: Directory
           outputBinding:
             glob: DT5303
-    in:
-      DT5301: DT5301
-      DT5302: DT5302
-      DT5303: DT5303
-      DT5304: SS5301/DT5304
-    out: [DT5301, DT5302, DT5303]
-
+    out:
+    - DT5301
+    - DT5302
+    - DT5303
   SS5303:
+    in:
+      DT5301: SS5302/DT5301
+      DT5302: SS5302/DT5302
+      DT5303: SS5302/DT5303
+      DT5304: SS5301/DT5304
     run:
       class: CommandLineTool
-      baseCommand: ["SS5303"]
+
       inputs:
         DT5301:
           type: Directory
@@ -102,14 +113,11 @@ steps:
           type: Directory
           inputBinding:
             position: 4
+
       outputs:
         DT5305:
           type: Directory
           outputBinding:
             glob: DT5305
-    in:
-      DT5301: SS5302/DT5301
-      DT5302: SS5302/DT5302
-      DT5303: SS5302/DT5303
-      DT5304: SS5301/DT5304
-    out: [DT5305]
+    out:
+    - DT5305
