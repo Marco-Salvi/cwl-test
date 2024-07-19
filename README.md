@@ -46,6 +46,8 @@ approach:
 - This abstract CWL maintains the structure of the original Process Run Crate
 - It represents software components as operations rather than command-line tools as in the concrete CWL version
 - While not executable, it provides a clear representation of the workflow
+- CWL has a lot of tools available for validating and visualizing
+  workflows ([example](https://view.commonwl.org/workflows/github.com/Marco-Salvi/cwl-test/blob/main/workflow.cwl))
 
 ## Potential Limitations
 
