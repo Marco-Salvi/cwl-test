@@ -1,0 +1,294 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        }
+      ],
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Lava flows",
+      "description": "Automated forecast system for lava flows",
+      "license": "GPL-3.0-or-later",
+      "author": {
+        "@id": "https://www.ingv.it/"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/wfrun/process/0.4"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/workflow/0.4"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "WF5031.cwl"
+        },
+        {
+          "@id": "DT5301"
+        },
+        {
+          "@id": "DT5302"
+        },
+        {
+          "@id": "DT5303"
+        },
+        {
+          "@id": "DT5304"
+        },
+        {
+          "@id": "DT5305"
+        },
+        {
+          "@id": "SS5301"
+        },
+        {
+          "@id": "SS5302"
+        },
+        {
+          "@id": "SS5303"
+        }
+      ],
+      "mainEntity": {
+        "@id": "WF5031.cwl"
+      }
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/process/0.4",
+      "@type": "CreativeWork",
+      "name": "Process Run Crate",
+      "version": "0.4"
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/workflow/0.4",
+      "@type": "CreativeWork",
+      "name": "Workflow Run Crate",
+      "version": "0.4"
+    },
+    {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+      "@type": "CreativeWork",
+      "name": "Workflow RO-Crate",
+      "version": "1.0"
+    },
+    {
+      "@id": "WF5031.cwl",
+      "@type": [
+        "File",
+        "SoftwareSourceCode",
+        "ComputationalWorkflow"
+      ],
+      "name": "Lava flow forecast",
+      "author": {
+        "@id": "https://orcid.org/0000-0001-6604-1479"
+      },
+      "creator": {
+        "@id": "https://orcid.org/0000-0001-6604-1479"
+      },
+      "programmingLanguage": {
+        "@id": "https://about.workflowhub.eu/Workflow-RO-Crate/#cwl"
+      },
+      "input": [
+        {
+          "@id": "#DT5301-param"
+        },
+        {
+          "@id": "#DT5302-param"
+        },
+        {
+          "@id": "#DT5303-param"
+        }
+      ],
+      "output": [
+        {
+          "@id": "#DT5304-param"
+        },
+        {
+          "@id": "#DT5305-param"
+        }
+      ]
+    },
+    {
+      "@id": "#DT5301-param",
+      "@type": "FormalParameter",
+      "additionalType": "Dataset",
+      "conformsTo": {
+        "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+      },
+      "description": "TODO",
+      "workExample": {
+        "@id": "DT5301"
+      },
+      "name": "Topography",
+      "valueRequired": true
+    },
+    {
+      "@id": "#DT5302-param",
+      "@type": "FormalParameter",
+      "additionalType": "Dataset",
+      "conformsTo": {
+        "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+      },
+      "description": "TODO",
+      "workExample": {
+        "@id": "DT5302"
+      },
+      "name": "Eruption source parameters",
+      "valueRequired": true
+    },
+    {
+      "@id": "#DT5303-param",
+      "@type": "FormalParameter",
+      "additionalType": "Dataset",
+      "conformsTo": {
+        "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+      },
+      "description": "TODO",
+      "workExample": {
+        "@id": "DT5303"
+      },
+      "name": "Lava field data",
+      "valueRequired": true
+    },
+    {
+      "@id": "#DT5304-param",
+      "@type": "FormalParameter",
+      "additionalType": "Dataset",
+      "conformsTo": {
+        "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+      },
+      "description": "TODO",
+      "workExample": {
+        "@id": "DT5304"
+      },
+      "name": "Model output",
+      "valueRequired": true
+    },
+    {
+      "@id": "#DT5305-param",
+      "@type": "FormalParameter",
+      "additionalType": "Dataset",
+      "conformsTo": {
+        "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+      },
+      "description": "TODO",
+      "workExample": {
+        "@id": "DT5305"
+      },
+      "name": "Lava inundation maps",
+      "valueRequired": true
+    },
+    {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl",
+      "@type": "ComputerLanguage",
+      "identifier": "https://www.commonwl.org/",
+      "name": "Common Workflow Language",
+      "url": "https://www.commonwl.org/"
+    },
+    {
+      "@id": "SS5301",
+      "@type": "SoftwareApplication",
+      "name": "Model lava flow",
+      "description": "Prepare the digital elevation model and the input data and run the model",
+      "softwareVersion": "v1.0.0"
+    },
+    {
+      "@id": "SS5302",
+      "@type": "SoftwareApplication",
+      "name": "Data assimilation",
+      "description": "Integration of the observations into the model",
+      "softwareVersion": "v1.0"
+    },
+    {
+      "@id": "SS5303",
+      "@type": "SoftwareApplication",
+      "name": "Code post processing",
+      "description": "Postprocessing and visualization of the output of the VLAVA simulations (lava flow field)",
+      "softwareVersion": "v1.0"
+    },
+    {
+      "@id": "DT5301",
+      "@type": "Dataset",
+      "name": "Topography",
+      "abstract": "2D matrix of terrain elevations, eventually obtained from satellite images (eg: Pleiades)",
+      "url": "https://ics-c.epos-ip.org/development/k8s-epos-deploy/dt-geo/api/v1/resources/details/dd8d3201-17ba-458c-b723-8d8fce527bb1",
+      "author": {
+        "@id": "https://orcid.org/0000-0001-6604-1479"
+      },
+      "exampleOfWork": "#DT5301-param"
+    },
+    {
+      "@id": "DT5302",
+      "@type": "Dataset",
+      "name": "Eruption source parameters",
+      "abstract": "ASCII file containing the coordinates of the vent(s), time-dependent mass flow rate(s), temperatures, density and viscosity law parameters. List of 'key = value' records or JSON structure",
+      "url": "https://ics-c.epos-ip.org/development/k8s-epos-deploy/dt-geo/api/v1/resources/details/ab4842ae-c593-4a42-9f69-277dda7b2fc1",
+      "author": {
+        "@id": "https://orcid.org/0000-0001-6604-1479"
+      },
+      "exampleOfWork": "#DT5302-param"
+    },
+    {
+      "@id": "DT5303",
+      "@type": "Dataset",
+      "name": "Lava field data",
+      "abstract": "Provide information on the developed lava field at different times. This  includes estimates of the thickness and temperature in different places of the lava flow, and the extension of the lava flow field.",
+      "url": "https://ics-c.epos-ip.org/development/k8s-epos-deploy/dt-geo/api/v1/resources/details/c77920a7-c19e-4cf4-b892-168397e7f6f8",
+      "author": {
+        "@id": "https://orcid.org/0000-0001-6604-1479"
+      },
+      "exampleOfWork": "#DT5303-param"
+    },
+    {
+      "@id": "DT5304",
+      "@type": "Dataset",
+      "name": "Model output",
+      "abstract": "Lava flow, 2D matrices",
+      "url": "https://ics-c.epos-ip.org/development/k8s-epos-deploy/dt-geo/api/v1/resources/details/9e09ff19-9375-46c5-81db-7713c73fba06",
+      "author": {
+        "@id": "https://orcid.org/0000-0001-6604-1479"
+      },
+      "exampleOfWork": "#DT5304-param"
+    },
+    {
+      "@id": "DT5305",
+      "@type": "Dataset",
+      "name": "Lava inundation maps",
+      "abstract": "Volcanic hazard, lava flows, 2D matrices",
+      "url": "https://ics-c.epos-ip.org/development/k8s-epos-deploy/dt-geo/api/v1/resources/details/5ba1421a-6b45-4f6f-a69b-880af0d3fd6a",
+      "author": {
+        "@id": "https://orcid.org/0000-0001-6604-1479"
+      },
+      "exampleOfWork": "#DT5305-param"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-6604-1479",
+      "@type": "Person",
+      "name": "Giovanni Macedonio",
+      "affiliation": {
+        "@id": "https://www.ingv.it/"
+      }
+    },
+    {
+      "@id": "https://www.ingv.it/",
+      "@type": "Organization",
+      "name": "Istituto Nazionale di Geofisica e Vulcanologia (INGV)"
+    }
+  ]
+}
