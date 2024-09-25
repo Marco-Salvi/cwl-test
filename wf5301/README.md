@@ -47,9 +47,13 @@ approach:
 - It represents software components as operations rather than command-line tools as in the concrete CWL version
 - While not executable, it provides a clear representation of the workflow
 - CWL has a lot of tools available for validating and visualizing
-  workflows ([example](https://view.commonwl.org/workflows/github.com/Marco-Salvi/cwl-test/blob/main/workflow.cwl))
+  workflows ([example](https://view.commonwl.org/workflows/github.com/Marco-Salvi/cwl-test/blob/main/wf5301/workflow.cwl))
 
 ## Potential Limitations
 
 - May not capture all metadata from the original RO-Crate (need to explore further)
 - Doesn't represent datasets as datasets but as directories
+
+## Manual Step
+
+In the spreadsheets there is a manual step (ST530101) that is executed before the workflow starts. This step is the preparation of the input data. Since it is a manual step it is not represented in the CWL workflow.
