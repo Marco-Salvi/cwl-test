@@ -57,3 +57,7 @@ approach:
 ## Manual Step
 
 In the spreadsheets there is a manual step (ST530101) that is executed before the workflow starts. This step is the preparation of the input data. Since it is a manual step it is not represented in the CWL workflow.
+
+## Inconsistencies
+
+In the spreadsheet, `SS5301` should be executed in parallel with `SS5302` but there is also is a dependency between them: `SS5302` requires the output of `SS5301`. Depending on the meaning of "executed in parallel" this could be an inconsistency in the spreadsheet. In the CWL the parallel execution is not represented.
