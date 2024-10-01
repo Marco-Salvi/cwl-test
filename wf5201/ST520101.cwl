@@ -10,7 +10,7 @@ inputs:
 outputs:
     DT5201:
         type: Directory
-        outputSource: SS5205/DT5201
+        outputSource: SS5206/DT5201
 steps:
     SS5201:
         run:

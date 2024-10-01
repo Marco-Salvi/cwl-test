@@ -47,7 +47,7 @@ steps:
     ST520102:
         run: ST520102.cwl
         in:
-            DT5209: ST520116/DT5209
+            DT5209: ST520115/DT5209
         out: []
     ST520103:
         run: ST520103.cwl
