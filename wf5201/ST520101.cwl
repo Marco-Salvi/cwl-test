@@ -4,18 +4,18 @@ cwlVersion: v1.2
 class: Workflow
 
 inputs:
-  DT52010: Directory
   DT5202: Directory
   DT5203: Directory
   DT5204: Directory
   DT5205: Directory
   DT5206: Directory
   DT5207: Directory
+  DT5210: Directory
 
 outputs:
   DT5201:
     type: Directory
-    outputSource: SS5203/DT5201
+    outputSource: SS5215/DT5201
 
 steps:
   SS5201:
@@ -47,11 +47,11 @@ steps:
     - DT5201
   SS5204:
     in:
-      DT52010: DT52010
+      DT5210: DT5210
     run:
       class: Operation
       inputs:
-        DT52010: Directory
+        DT5210: Directory
       outputs:
         DT5201: Directory
         DT5202: Directory
@@ -60,11 +60,11 @@ steps:
     - DT5202
   SS5205:
     in:
-      DT52010: DT52010
+      DT5210: DT5210
     run:
       class: Operation
       inputs:
-        DT52010: Directory
+        DT5210: Directory
       outputs:
         DT5201: Directory
         DT5203: Directory
@@ -73,11 +73,11 @@ steps:
     - DT5203
   SS5206:
     in:
-      DT52010: DT52010
+      DT5210: DT5210
     run:
       class: Operation
       inputs:
-        DT52010: Directory
+        DT5210: Directory
       outputs:
         DT5201: Directory
         DT5204: Directory
@@ -152,15 +152,15 @@ steps:
     - DT5201
   SS5213:
     in:
-      DT52010: DT52010
       DT5202: SS5204/DT5202
       DT5203: SS5205/DT5203
+      DT5210: DT5210
     run:
       class: Operation
       inputs:
-        DT52010: Directory
         DT5202: Directory
         DT5203: Directory
+        DT5210: Directory
       outputs:
         DT5201: Directory
         DT5208: Directory
