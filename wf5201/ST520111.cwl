@@ -14,6 +14,7 @@ steps:
             outputs:
                 DT5201: Directory
                 DT5206: Directory
+        in: {}
         out:
             - SS5211/DT5201
             - DT5206

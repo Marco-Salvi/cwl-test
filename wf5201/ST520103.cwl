@@ -10,5 +10,6 @@ steps:
             inputs: {}
             outputs:
                 DT5201: Directory
+        in: {}
         out:
             - SS5203/DT5201

@@ -8,3 +8,5 @@ steps:
             class: Operation
             inputs: {}
             outputs: {}
+        in: {}
+        out: []

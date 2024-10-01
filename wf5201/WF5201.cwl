@@ -29,7 +29,7 @@ outputs:
         outputSource: ST520114/DT5208
     DT5209:
         type: Directory
-        outputSource: ST520115/DT5209
+        outputSource: ST520116/DT5209
 requirements:
     SubworkflowFeatureRequirement: {}
 steps:
@@ -47,11 +47,13 @@ steps:
     ST520102:
         run: ST520102.cwl
         in:
-            DT5209: ST520115/DT5209
+            DT5209: ST520116/DT5209
+        out: []
     ST520103:
         run: ST520103.cwl
         in:
             DT5210: DT5210
+        out: []
     ST520104:
         run: ST520104.cwl
         in:
@@ -74,10 +76,12 @@ steps:
         run: ST520107.cwl
         in:
             DT5210: DT5210
+        out: []
     ST520108:
         run: ST520108.cwl
         in:
             DT5210: DT5210
+        out: []
     ST520109:
         run: ST520109.cwl
         in:
@@ -98,14 +102,18 @@ steps:
             - DT5207
     ST520112:
         run: ST520112.cwl
+        in: {}
+        out: []
     ST520113:
         run: ST520113.cwl
         in:
             DT5205: ST520109/DT5205
             DT5206: ST520110/DT5206
             DT5207: ST520111/DT5207
+        out: []
     ST520114:
         run: ST520114.cwl
+        in: {}
         out:
             - DT5208
     ST520115:
@@ -122,3 +130,5 @@ steps:
             - DT5209
     ST520117:
         run: ST520117.cwl
+        in: {}
+        out: []
