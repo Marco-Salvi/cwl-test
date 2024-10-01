@@ -10,18 +10,16 @@ steps:
         run:
             class: Operation
             inputs:
-                DT5201: Directory
                 DT5202: Directory
                 DT5203: Directory
-                DT5209: Directory
+                DT52010: Directory
             outputs:
                 DT5201: Directory
-                DT5207: Directory
+                DT5208: Directory
         in:
-            DT5201: DT5201
             DT5202: DT5202
             DT5203: DT5203
-            DT5209: DT5209
+            DT52010: DT52010
         out:
             - DT5201
-            - DT5207
+            - DT5208

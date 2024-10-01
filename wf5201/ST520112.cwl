@@ -7,14 +7,14 @@ steps:
         run:
             class: Operation
             inputs:
-                DT5204: Directory
                 DT5205: Directory
                 DT5206: Directory
+                DT5207: Directory
             outputs:
                 DT5201: Directory
         in:
-            DT5204: DT5204
             DT5205: DT5205
             DT5206: DT5206
+            DT5207: DT5207
         out:
             - DT5201

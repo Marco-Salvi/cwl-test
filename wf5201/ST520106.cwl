@@ -5,18 +5,18 @@ inputs:
 outputs:
     DT5204:
         type: Directory
-        outputSource: ST520106/DT5204
+        outputSource: SS5206/DT5204
 steps:
     SS5206:
         run:
             class: Operation
             inputs:
-                DT5209: Directory
+                DT52010: Directory
             outputs:
                 DT5201: Directory
-                DT5202: Directory
+                DT5204: Directory
         in:
-            DT5209: DT5209
+            DT52010: DT52010
         out:
             - DT5201
-            - DT5202
+            - DT5204

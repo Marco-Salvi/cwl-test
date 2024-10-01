@@ -5,18 +5,18 @@ inputs:
 outputs:
     DT5209:
         type: Directory
-        outputSource: ST520115/DT5209
+        outputSource: DT5209
 steps:
     SS5215:
         run:
             class: Operation
             inputs:
-                DT5207: Directory
+                DT5208: Directory
+                DT5209: Directory
             outputs:
                 DT5201: Directory
-                DT5208: Directory
         in:
-            DT5207: DT5207
+            DT5208: DT5208
+            DT5209: DT5209
         out:
             - DT5201
-            - DT5208

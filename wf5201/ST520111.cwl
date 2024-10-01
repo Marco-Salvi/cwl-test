@@ -5,7 +5,7 @@ inputs:
 outputs:
     DT5207:
         type: Directory
-        outputSource: ST520111/DT5207
+        outputSource: SS5211/DT5207
 steps:
     SS5211:
         run:
@@ -13,8 +13,8 @@ steps:
             inputs: {}
             outputs:
                 DT5201: Directory
-                DT5206: Directory
+                DT5207: Directory
         in: {}
         out:
             - DT5201
-            - DT5206
+            - DT5207

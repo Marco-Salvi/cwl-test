@@ -10,8 +10,6 @@ steps:
             inputs: {}
             outputs:
                 DT5201: Directory
-                DT5209: Directory
         in: {}
         out:
             - DT5201
-            - DT5209
