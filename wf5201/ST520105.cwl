@@ -18,5 +18,5 @@ steps:
         in:
             DT5209: DT5209
         out:
-            - SS5205/DT5201
+            - DT5201
             - DT5203

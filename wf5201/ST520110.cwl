@@ -16,5 +16,5 @@ steps:
                 DT5204: Directory
         in: {}
         out:
-            - SS5210/DT5201
+            - DT5201
             - DT5204

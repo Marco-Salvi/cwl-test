@@ -1,10 +1,10 @@
 strict digraph {
 
 
-	"DT5201" [ color="2", colorscheme="blues3", fillcolor="1", style="filled",  weight=0 ];
-
 	"SS5207" [ color="2", colorscheme="ylorbr3", fillcolor="1", style="filled",  weight=0 ];
 
 	"SS5207" -> "DT5201" [ label="is updated by", labeltooltip="DT5201 - is updated by - SS5207",  weight=0 ];
+
+	"DT5201" [ color="2", colorscheme="blues3", fillcolor="1", style="filled",  weight=0 ];
 
 }
