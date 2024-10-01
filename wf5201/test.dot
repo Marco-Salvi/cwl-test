@@ -1,0 +1,56 @@
+digraph G {
+bgcolor="#eeeeee";
+clusterrank=local;
+labeljust=right;
+labelloc=bottom;
+"SS5211" [fillcolor=lightgoldenrodyellow, label=SS5211, shape=record, style=dashed];
+"SS5212" [fillcolor=lightgoldenrodyellow, label=SS5212, shape=record, style=dashed];
+"SS5211" -> "SS5212";
+"SS5209" [fillcolor=lightgoldenrodyellow, label=SS5209, shape=record, style=dashed];
+"SS5212" [fillcolor=lightgoldenrodyellow, label=SS5212, shape=record, style=dashed];
+"SS5209" -> "SS5212";
+"SS5210" [fillcolor=lightgoldenrodyellow, label=SS5210, shape=record, style=dashed];
+"SS5212" [fillcolor=lightgoldenrodyellow, label=SS5212, shape=record, style=dashed];
+"SS5210" -> "SS5212";
+"SS5205" [fillcolor=lightgoldenrodyellow, label=SS5205, shape=record, style=dashed];
+"SS5213" [fillcolor=lightgoldenrodyellow, label=SS5213, shape=record, style=dashed];
+"SS5205" -> "SS5213";
+"SS5204" [fillcolor=lightgoldenrodyellow, label=SS5204, shape=record, style=dashed];
+"SS5213" [fillcolor=lightgoldenrodyellow, label=SS5213, shape=record, style=dashed];
+"SS5204" -> "SS5213";
+"SS5206" [fillcolor=lightgoldenrodyellow, label=SS5206, shape=record, style=dashed];
+"SS5214" [fillcolor=lightgoldenrodyellow, label=SS5214, shape=record, style=dashed];
+"SS5206" -> "SS5214";
+"SS5213" [fillcolor=lightgoldenrodyellow, label=SS5213, shape=record, style=dashed];
+"SS5214" [fillcolor=lightgoldenrodyellow, label=SS5214, shape=record, style=dashed];
+"SS5213" -> "SS5214";
+"SS5213" [fillcolor=lightgoldenrodyellow, label=SS5213, shape=record, style=dashed];
+"SS5215" [fillcolor=lightgoldenrodyellow, label=SS5215, shape=record, style=dashed];
+"SS5213" -> "SS5215";
+"SS5214" [fillcolor=lightgoldenrodyellow, label=SS5214, shape=record, style=dashed];
+"SS5215" [fillcolor=lightgoldenrodyellow, label=SS5215, shape=record, style=dashed];
+"SS5214" -> "SS5215";
+subgraph cluster_inputs {
+label="Workflow Inputs";
+rank=same;
+style=dashed;
+"DT52010" [fillcolor="#94DDF4", label=DT52010, shape=record, style=filled];
+"DT52010" [fillcolor="#94DDF4", label=DT52010, shape=record, style=filled];
+"DT52010" [fillcolor="#94DDF4", label=DT52010, shape=record, style=filled];
+"DT52010" [fillcolor="#94DDF4", label=DT52010, shape=record, style=filled];
+}
+
+"DT52010" -> "SS5204";
+"DT52010" -> "SS5205";
+"DT52010" -> "SS5206";
+"DT52010" -> "SS5213";
+subgraph cluster_outputs {
+label="Workflow Outputs";
+labelloc=b;
+rank=same;
+style=dashed;
+"DT5201" [fillcolor="#94DDF4", label=DT5201, shape=record, style=filled];
+}
+
+"SS5203" -> "DT5201";
+}
