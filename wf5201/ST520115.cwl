@@ -6,6 +6,7 @@ class: Workflow
 inputs:
   DT5208: Directory
   DT5209: Directory
+  DT5210: Directory
 
 outputs:
   DT5209:
@@ -17,11 +18,13 @@ steps:
     in:
       DT5208: DT5208
       DT5209: DT5209
+      DT5210: DT5210
     run:
       class: Operation
       inputs:
         DT5208: Directory
         DT5209: Directory
+        DT5210: Directory
       outputs:
         DT5201: Directory
     out:

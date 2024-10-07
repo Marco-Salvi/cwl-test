@@ -12,10 +12,7 @@ inputs:
   DT5207: Directory
   DT5210: Directory
 
-outputs:
-  DT5201:
-    type: Directory
-    outputSource: SS5215/DT5201
+outputs: {}
 
 steps:
   SS5201:
@@ -148,16 +145,20 @@ steps:
         DT5207: Directory
       outputs:
         DT5201: Directory
+        DT52011: Directory
     out:
     - DT5201
+    - DT52011
   SS5213:
     in:
+      DT52011: SS5212/DT52011
       DT5202: SS5204/DT5202
       DT5203: SS5205/DT5203
       DT5210: DT5210
     run:
       class: Operation
       inputs:
+        DT52011: Directory
         DT5202: Directory
         DT5203: Directory
         DT5210: Directory
@@ -171,11 +172,13 @@ steps:
     in:
       DT5204: SS5206/DT5204
       DT5208: SS5213/DT5208
+      DT5210: DT5210
     run:
       class: Operation
       inputs:
         DT5204: Directory
         DT5208: Directory
+        DT5210: Directory
       outputs:
         DT5201: Directory
         DT5209: Directory
@@ -186,11 +189,13 @@ steps:
     in:
       DT5208: SS5213/DT5208
       DT5209: SS5214/DT5209
+      DT5210: DT5210
     run:
       class: Operation
       inputs:
         DT5208: Directory
         DT5209: Directory
+        DT5210: Directory
       outputs:
         DT5201: Directory
     out:

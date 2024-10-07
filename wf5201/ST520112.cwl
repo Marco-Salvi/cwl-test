@@ -24,5 +24,7 @@ steps:
         DT5207: Directory
       outputs:
         DT5201: Directory
+        DT52011: Directory
     out:
     - DT5201
+    - DT52011

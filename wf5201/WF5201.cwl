@@ -10,9 +10,6 @@ inputs:
   DT5210: Directory
 
 outputs:
-  DT5201:
-    type: Directory
-    outputSource: ST520101/DT5201
   DT5202:
     type: Directory
     outputSource: ST520104/DT5202
@@ -49,8 +46,7 @@ steps:
       DT5207: ST520111/DT5207
       DT5210: DT5210
     run: ST520101.cwl
-    out:
-    - DT5201
+    out: []
   ST520102:
     in:
       DT5209: ST520116/DT5209
@@ -118,18 +114,24 @@ steps:
     in:
       DT5202: ST520104/DT5202
       DT5203: ST520105/DT5203
+      DT5205: ST520109/DT5205
+      DT5206: ST520110/DT5206
+      DT5207: ST520111/DT5207
       DT5210: DT5210
+      DT5211: DT5210
     run: ST520113.cwl
     out: []
   ST520114:
     in:
       DT5204: ST520106/DT5204
+      DT5210: DT5210
     run: ST520114.cwl
     out:
     - DT5208
   ST520115:
     in:
       DT5208: ST520114/DT5208
+      DT5210: DT5210
     run: ST520115.cwl
     out:
     - DT5209
